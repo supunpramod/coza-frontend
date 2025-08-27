@@ -1,5 +1,6 @@
 import React from "react";
 import about01 from "../assets/about-01.jpg";
+import about02 from "../assets/about-02.jpg";
 
 const About = () => {
   return (
@@ -59,7 +60,7 @@ const About = () => {
             <div className="border-4 border-gray-200 p-1">
               <div className="overflow-hidden">
                 <img
-                  src="/images/about-02.jpg"
+                  src={about02}
                   alt="Our Mission"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                 />

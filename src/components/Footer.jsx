@@ -1,10 +1,18 @@
 import { FaFacebook, FaInstagram, FaPinterestP, FaHeart } from 'react-icons/fa';
+import IconPay1 from '../assets/icons/icon-pay-01.png';
+import IconPay2 from '../assets/icons/icon-pay-02.png';
+import IconPay3 from '../assets/icons/icon-pay-03.png';
+import IconPay4 from '../assets/icons/icon-pay-04.png';
+import IconPay5 from '../assets/icons/icon-pay-05.png';
 
 const Footer = () => {
+  const iconPays = [IconPay1, IconPay2, IconPay3, IconPay4, IconPay5];
+
   return (
     <footer className="bg-black pt-20 pb-8 text-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Categories */}
           <div>
             <h4 className="text-xl mb-6">Categories</h4>
             <ul className="space-y-2">
@@ -13,6 +21,8 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+
+          {/* Help */}
           <div>
             <h4 className="text-xl mb-6">Help</h4>
             <ul className="space-y-2">
@@ -21,6 +31,8 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+
+          {/* GET IN TOUCH */}
           <div>
             <h4 className="text-xl mb-6">GET IN TOUCH</h4>
             <p className="mb-4">
@@ -32,6 +44,8 @@ const Footer = () => {
               <a href="#" className="hover:text-pink-400"><FaPinterestP /></a>
             </div>
           </div>
+
+          {/* Newsletter */}
           <div>
             <h4 className="text-xl mb-6">Newsletter</h4>
             <form className="space-y-4">
@@ -45,12 +59,14 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Payment Icons */}
         <div className="flex justify-center items-center mt-10 space-x-4">
-          {[1, 2, 3, 4, 5].map((n) => (
-            <img key={n} src={`/images/icons/icon-pay-0${n}.png`} alt={`ICON-PAY-${n}`} className="h-6" />
+          {iconPays.map((icon, index) => (
+            <img key={index} src={icon} alt={`ICON-PAY-${index + 1}`} className="h-6" />
           ))}
         </div>
 
+        {/* Footer Text */}
         <p className="text-center text-sm text-gray-500 mt-8">
           &copy; {new Date().getFullYear()} All rights reserved | Made with <FaHeart className="inline text-pink-400" /> by <a href="https://colorlib.com" className="hover:underline">Colorlib</a> & distributed by <a href="https://themewagon.com" className="hover:underline">ThemeWagon</a>
         </p>

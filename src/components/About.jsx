@@ -1,4 +1,5 @@
 import React from "react";
+import about01 from "../assets/about-01.jpg";
 
 const About = () => {
   return (
@@ -27,7 +28,7 @@ const About = () => {
             <div className="border-4 border-gray-200 p-1">
               <div className="overflow-hidden">
                 <img
-                  src="/images/about-01.jpg"
+                  src={about01}
                   alt="Our Story"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                 />
